@@ -1,7 +1,7 @@
 {
   "name": "TecnoLikeCuba",
   "short_name": "TecnoLike",
-  "start_url": "/",
+  "start_url": "/mobile/",
   "description": "Todo lo referente a tecnología tanto de Cuba como del Mundo.",
   "lang": "es_ES",
   "icons": [

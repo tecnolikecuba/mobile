@@ -4,7 +4,7 @@
     //Registro de SW
     if ('serviceWorker' in n) {
         w.addEventListener('load', () => {
-            n.serviceWorker.register('/sw.js')
+            n.serviceWorker.register('sw.js')
                 .then(registration => {
                     c(registration);
                     c(
@@ -24,7 +24,7 @@
             if (oldState !== status) {
                 let n = new Notification('Bienvenido', {
                     body: 'El equipo de TecnoLike-Cuba- te da la bienvenido al blog. Gracias por permitir las notificaciones',
-                    icon: '/assets/img/logos/icon_192x192.png'
+                    icon: 'assets/img/logos/icon_192x192.png'
                 })
             }
         })

@@ -62,7 +62,7 @@ angular.module('appHome', [{
         uiView = jQuery('#ui-view');
         mdContent.scroll(function () {
             if ($rootScope.Posts.length > 0 && !$rootScope.loading
-                && location.href.split(location.origin)[1] === "/#!/"
+                && location.href.split(location.origin)[1] === "/mobile/#!/"
                 && mdContent.scrollTop() >= uiView.height() - mdContent.height() - 1000) {
                 $rootScope.loading = true;
                 $scope.loadMore();

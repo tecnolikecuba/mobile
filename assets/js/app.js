@@ -40,9 +40,9 @@
         ic = d.querySelector('img.iconMain');
         c(e, e.type)
         if (n.onLine) {
-            ic.setAttribute('src', '/assets/img/logos/icon_32x32.png');
+            ic.setAttribute('src', 'assets/img/logos/icon_32x32.png');
         } else {
-            ic.setAttribute('src', '/assets/img/logos/icon_32x32_off.png');
+            ic.setAttribute('src', 'assets/img/logos/icon_32x32_off.png');
         }
     }
 

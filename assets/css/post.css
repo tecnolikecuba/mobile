@@ -1,0 +1,12 @@
+#contentPost img {
+    width: auto;
+    height: auto;
+    max-width: 80vw !important;
+    max-height: 80vh !important;
+}
+
+ul > li.blocks-gallery-item {
+    list-style: none;
+}
+
+/* TODO: hacer selector para mostrar correctamente las aplicaciones

@@ -1,0 +1,37 @@
+<div ng-if="offLine" class="jumbotron jumbotron text-center p-1 m-0 ng-fade">
+    <b class="badge badge-danger">No se pudo establecer conexión con el servidor remoto.</b>
+
+    <md-button class="md-icon-button" aria-label="Menu" ng-click="loadMore()">
+        <md-icon md-svg-icon="/assets/img/icons/_ionicons_svg_md-refresh.svg"></md-icon>
+    </md-button>
+</div>
+
+<md-list>
+    <md-list-item class="md-3-line ng-fade post" ng-repeat="post in Posts" id="post_{{post.id}}"
+                  ui-sref="viewPost({id: post.id,link:post.link,author:post.author})">
+        <div class="text-center" flex="100">
+            <div class="jumbotron jumbotron-fluid pl-2 pr-2 pb-0 mb-0">
+                <div flex="">
+                    <img style="max-height: 7rem;" ng-src="{{post.jetpack_featured_media_url}}">
+                </div>
+                <div flex="">
+                    <h4 ng-bind-html="post.title.rendered"></h4>
+                    <p class="badge badge-primary">{{post.date}}</p>
+                    <p>
+                        Categoría<span ng-if="post.categories.length > 1">s</span>:
+                        <span ng-repeat="cat_id in post.categories">
+                            <span ng-repeat="categ in Categories" ng-if="cat_id === categ.id"
+                                  class="badge badge-secondary">
+                                {{categ.name}}
+                            </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div flex="" class="mt-0 pb-3">
+                <p ng-bind-html="post.excerpt.rendered"></p>
+            </div>
+        </div>
+        <md-divider inset></md-divider>
+    </md-list-item>
+</md-list>

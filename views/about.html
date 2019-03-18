@@ -1,0 +1,47 @@
+<div class="jumbotron jumbotron-fluid p-3 text-center">
+    <h5 class="mb-3">Acerca de aplicación móvil del blog TecnoLikeCuba</h5>
+
+    <p class="text-justify">Esta aplicación se desarrolla haciendo uso de las nuevas generaciones de estándares para la
+        web que se definen con el nombre de <b>Progressive Web Apps</b>, permitiendo de esta forma que usted pueda
+        instalarla y usarla de manera que se comporte como nativa en su dispositivo independientemente del sistema
+        operativo sobre el cual se está ejecutando, también permite ser agregada a la pantalla de inicio de tu
+        dispositivo móvil o escritorio en caso de ser un ordenador.</p>
+    <p class="text-justify">Gracias a las tecnologías que esta utiliza para la comunicación y el intercambio de datos,
+        permite el ahorro de estos. Almacena en tu dispositivo los archivos necesarios para poder seguir funcionando
+        incluso en caso de que no tengas conexión a internet.</p>
+</div>
+
+<div flex-xs flex-gt-xs="50" style="margin-left: auto;margin-right: auto;" layout="column">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Información del autor</span>
+                <span class="md-subhead">{{author.name}}</span>
+                <a class="md-subhead" href="mailto:{{author.email}}">{{author.email}}</a>
+            </md-card-title-text>
+            <md-card-title-media>
+                <div class="md-media-md card-media">
+                    <img class="rounded-circle" src="/assets/img/mms.jpg" alt="Imagen del autor">
+                </div>
+            </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-icon-button" aria-label="Facebook" target="_blank"
+                       href="https://www.facebook.com/marcos940412">
+                <md-icon md-svg-icon="/assets/img/icons/_ionicons_svg_logo-facebook.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="LinkedIn" target="_blank"
+                       href="https://www.linkedin.com/in/marcos-macias-s%C3%A1nchez-767791118/">
+                <md-icon md-svg-icon="/assets/img/icons/_ionicons_svg_logo-linkedin.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Twitter" target="_blank"
+                       href="https://twitter.com/mmaciassanchez">
+                <md-icon md-svg-icon="/assets/img/icons/_ionicons_svg_logo-twitter.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Gmail"
+                       href="mailto:{{author.email}}">
+                <md-icon md-svg-icon="/assets/img/icons/_ionicons_svg_md-mail.svg"></md-icon>
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</div>

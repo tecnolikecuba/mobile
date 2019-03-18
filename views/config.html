@@ -1,0 +1,37 @@
+<div flex-xs flex-gt-xs="50" style="margin-left: auto;margin-right: auto;" layout="column">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Configuraciones para ahorrar datos</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <md-switch class="md-primary" ng-model="options.comments" aria-label="Comentarios">
+                Cargar comentarios
+            </md-switch>
+
+            <h5>Descarga de nuevas imágenes</h5>
+            <div layout-wrap layout-gt-sm="row">
+                <div flex-gt-sm="50">
+                    <md-radio-group ng-model="options.images">
+                        <md-radio-button value="0" class="md-warn">Desactivar
+                        </md-radio-button>
+                        <p>Dimensión máxima permitida</p>
+                        <md-radio-button value="100" class="md-primary"> 100 px</md-radio-button>
+                        <md-radio-button value="250" class="md-primary">250 px</md-radio-button>
+                        <md-radio-button value="500" class="md-primary">500 px</md-radio-button>
+                        <md-radio-button value="-1">Ilimitado</md-radio-button>
+                    </md-radio-group>
+                </div>
+            </div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button aria-label="Cancelar" ui-sref="home">
+                Volver a portada
+            </md-button>
+            <md-button aria-label="Guardar" ng-click="guardarOpciones()">
+                Guardar
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</div>

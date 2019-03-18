@@ -1,0 +1,31 @@
+<div id="initialElement"></div>
+<div ng-if="offLine" class="jumbotron jumbotron text-center p-1 m-0 ng-fade">
+    <b class="badge badge-danger">No se pudo establecer conexión con el servidor remoto.</b>
+
+    <md-button class="md-icon-button" aria-label="Menu" ui-sref="home">
+        <md-icon md-svg-icon="/assets/img/icons/_ionicons_svg_md-refresh.svg"></md-icon>
+    </md-button>
+</div>
+
+
+<div id="Post" ng-if="ready">
+    <div id="titlePost" class="text-center jumbotron jumbotron-fluid pl-2 pr-2 pb-1 mb-0">
+        <img style="max-height: 7rem;" ng-src="{{Post.jetpack_featured_media_url}}">
+        <h4 ng-bind-html="Post.title.rendered"></h4>
+        <p>por {{Author.name}} | {{Post.date}}</p>
+        <p>
+            Categoría<span ng-if="Post.categories.length > 1">s</span>:
+            <span ng-repeat="cat_id in Post.categories">
+                <span ng-repeat="categ in Categories" ng-if="cat_id === categ.id"
+                      class="badge badge-secondary">
+                    {{categ.name}}
+                </span>
+            </span>
+        </p>
+    </div>
+    <md-content id="contentPost" class="text-justify mt-0 pb-3" layout-padding>
+        <div ng-bind-html="Post.content.rendered"></div>
+    </md-content>
+</div>
+
+<dir-disqus ng-if="options.comments" layout-padding="" config="disqusConfig"></dir-disqus>
